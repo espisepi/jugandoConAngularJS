@@ -19,7 +19,9 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div>
-	<img src="${bannerURL}" alt="Acme-Recycling Co., Inc." />
+	<img
+		src="http://www.aprende-facilmente.com/wp-content/uploads/2016/07/angularjs-logo.png"
+		alt="Acme-Recycling Co., Inc." />
 </div>
 
 <div>
@@ -37,8 +39,8 @@
 					<li><a href="admin/dashboard.do"><spring:message
 								code="master.page.statistics" /></a>
 				</ul></li>
-				
-				<li><a class="fNiv"><spring:message
+
+			<li><a class="fNiv"><spring:message
 						code="master.page.responsabilidades" /></a>
 				<ul>
 					<li class="arrow"></li>
@@ -52,7 +54,7 @@
 								code="master.page.ban" /></a></li>
 				</ul></li>
 
-			
+
 
 			<li><a class="fNiv"><spring:message
 						code="master.page.administrator.register" /></a>
@@ -104,26 +106,25 @@
 								code="master.page.incidence" /></a></li>
 				</ul></li>
 
-				
-			<li><a class="fNiv"><spring:message	code="master.page.recycler" /></a>
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.recycler" /></a>
 				<ul>
 					<li class="arrow"></li>
-					
-					<li><a href="recycler/list.do?d-16544-p=1"><spring:message code="master.page.recycler.list" /></a></li>
-				</ul>
-			</li>
-			
+
+					<li><a href="recycler/list.do?d-16544-p=1"><spring:message
+								code="master.page.recycler.list" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.opinion" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a
-						href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
+					<li><a href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
 								code="master.page.opinion.myListOpinionProduct" /></a></li>
 					<li><a href="opinion/actor/createOpinableItem.do"><spring:message
 								code="master.page.opinion.createOpinableProduct" /></a></li>
-				</ul>
-			</li>
+				</ul></li>
 
 
 			<li><a class="fNiv"><spring:message
@@ -172,34 +173,33 @@
 					<li><a href="course/buyer/list.do?d-16544-p=1"><spring:message
 								code="master.page.buyer.course" /></a></li>
 				</ul></li>
-				
-				<li><a class="fNiv"><spring:message	code="master.page.recycler" /></a>
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.recycler" /></a>
 				<ul>
 					<li class="arrow"></li>
-					
-					<li><a href="recycler/list.do?d-16544-p=1"><spring:message code="master.page.recycler.list" /></a></li>
-				</ul>
-			</li>
-			
+
+					<li><a href="recycler/list.do?d-16544-p=1"><spring:message
+								code="master.page.recycler.list" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.opinion" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a
-						href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
+					<li><a href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
 								code="master.page.opinion.myListOpinionProduct" /></a></li>
 					<li><a href="opinion/actor/createOpinableItem.do"><spring:message
 								code="master.page.opinion.createOpinableProduct" /></a></li>
-				</ul>
-			</li>
+				</ul></li>
 
-				<li><a href="newscast/buyer/list.do"><spring:message
+			<li><a href="newscast/buyer/list.do"><spring:message
 						code="master.page.New.list" /></a></li>
 
-		
-			
-				
-				
+
+
+
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.aboutUs" /></a>
 				<ul>
@@ -207,7 +207,7 @@
 					<li><a href="welcome/aboutUs.do"><spring:message
 								code="master.page.aboutUs" /></a></li>
 				</ul></li>
-				
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.material.buy" /></a>
 				<ul>
@@ -219,15 +219,15 @@
 					<li><a href="finder/buyer/list.do?d-16544-p=1"><spring:message
 								code="master.page.finder" /></a></li>
 				</ul></li>
-				
-				<li><a class="fNiv"><spring:message
+
+			<li><a class="fNiv"><spring:message
 						code="master.page.administrator.legislation" /></a>
 				<ul>
 					<li class="arrow"></li>
 					<li><a href="legislation/list.do"><spring:message
 								code="master.page.administrator.legislation" /></a></li>
 				</ul></li>
-				
+
 		</security:authorize>
 
 		<security:authorize access="hasRole('RECYCLER')">
@@ -299,31 +299,29 @@
 						href="course/recycler/listOfCoursesThatIAttend.do?d-16544-p=1"><spring:message
 								code="master.page.course.listOfCoursesThatIAttend" /></a></li>
 				</ul></li>
-				
-			<li><a class="fNiv"><spring:message	code="master.page.recycler" /></a>
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.recycler" /></a>
 				<ul>
 					<li class="arrow"></li>
-					
-					<li><a href="recycler/list.do?d-16544-p=1"><spring:message code="master.page.recycler.list" /></a></li>
-				</ul>
-			</li>
-			
+
+					<li><a href="recycler/list.do?d-16544-p=1"><spring:message
+								code="master.page.recycler.list" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.opinion" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a
-						href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
+					<li><a href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
 								code="master.page.opinion.myListOpinionProduct" /></a></li>
-					<li><a
-						href="opinion/actor/myListOpinionCourse.do?d-16544-p=1"><spring:message
+					<li><a href="opinion/actor/myListOpinionCourse.do?d-16544-p=1"><spring:message
 								code="master.page.opinion.myListOpinionCourse" /></a></li>
 					<li><a href="opinion/actor/createOpinableItem.do"><spring:message
 								code="master.page.opinion.createOpinableProduct" /></a></li>
 					<li><a href="opinion/actor/createOpinableCourse.do"><spring:message
 								code="master.page.opinion.createOpinableCourse" /></a></li>
-				</ul>
-			</li>
+				</ul></li>
 
 			<li><a class="fNiv"><spring:message
 						code="master.page.aboutUs" /></a>
@@ -332,15 +330,15 @@
 					<li><a href="welcome/aboutUs.do"><spring:message
 								code="master.page.aboutUs" /></a></li>
 				</ul></li>
-				
-				<li><a class="fNiv"><spring:message
+
+			<li><a class="fNiv"><spring:message
 						code="master.page.administrator.legislation" /></a>
 				<ul>
 					<li class="arrow"></li>
 					<li><a href="legislation/list.do"><spring:message
 								code="master.page.administrator.legislation" /></a></li>
 				</ul></li>
-				
+
 		</security:authorize>
 
 		<security:authorize access="hasRole('CARRIER')">
@@ -383,26 +381,25 @@
 						href="assessment/carrier/listMyAssessment.do?d-16544-p=1"><spring:message
 								code="master.page.assessment.listMyAssessment" /></a></li>
 				</ul></li>
-				
-				<li><a class="fNiv"><spring:message	code="master.page.recycler" /></a>
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.recycler" /></a>
 				<ul>
 					<li class="arrow"></li>
-					
-					<li><a href="recycler/list.do?d-16544-p=1"><spring:message code="master.page.recycler.list" /></a></li>
-				</ul>
-			</li>
-			
+
+					<li><a href="recycler/list.do?d-16544-p=1"><spring:message
+								code="master.page.recycler.list" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.opinion" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a
-						href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
+					<li><a href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
 								code="master.page.opinion.myListOpinionProduct" /></a></li>
 					<li><a href="opinion/actor/createOpinableItem.do"><spring:message
 								code="master.page.opinion.createOpinableProduct" /></a></li>
-				</ul>
-			</li>
+				</ul></li>
 
 			<li><a class="fNiv"><spring:message
 						code="master.page.aboutUs" /></a>
@@ -412,7 +409,7 @@
 								code="master.page.aboutUs" /></a></li>
 				</ul></li>
 
-				<li><a class="fNiv"><spring:message
+			<li><a class="fNiv"><spring:message
 						code="master.page.administrator.legislation" /></a>
 				<ul>
 					<li class="arrow"></li>
@@ -464,7 +461,7 @@
 					<li><a href="labelProduct/manager/list.do?d-16544-p=1"><spring:message
 								code="master.page.labelProduct.list" /></a></li>
 				</ul></li>
-				
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.incidence" /></a>
 				<ul>
@@ -474,26 +471,25 @@
 					<li><a href="incidence/manager/listResolved.do?d-16544-p=1"><spring:message
 								code="master.page.incidences.listResolved" /></a></li>
 				</ul></li>
-				
-			<li><a class="fNiv"><spring:message	code="master.page.recycler" /></a>
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.recycler" /></a>
 				<ul>
 					<li class="arrow"></li>
-					
-					<li><a href="recycler/list.do?d-16544-p=1"><spring:message code="master.page.recycler.list" /></a></li>
-				</ul>
-			</li>
-			
+
+					<li><a href="recycler/list.do?d-16544-p=1"><spring:message
+								code="master.page.recycler.list" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.opinion" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a
-						href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
+					<li><a href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
 								code="master.page.opinion.myListOpinionProduct" /></a></li>
 					<li><a href="opinion/actor/createOpinableItem.do"><spring:message
 								code="master.page.opinion.createOpinableProduct" /></a></li>
-				</ul>
-			</li>
+				</ul></li>
 
 			<li><a class="fNiv"><spring:message
 						code="master.page.aboutUs" /></a>
@@ -546,26 +542,25 @@
 					<li><a href="newscast/editor/create.do"><spring:message
 								code="master.page.New.create" /></a></li>
 				</ul></li>
-				
-			<li><a class="fNiv"><spring:message	code="master.page.recycler" /></a>
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.recycler" /></a>
 				<ul>
 					<li class="arrow"></li>
-					
-					<li><a href="recycler/list.do?d-16544-p=1"><spring:message code="master.page.recycler.list" /></a></li>
-				</ul>
-			</li>
-			
+
+					<li><a href="recycler/list.do?d-16544-p=1"><spring:message
+								code="master.page.recycler.list" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.opinion" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a
-						href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
+					<li><a href="opinion/actor/myListOpinionItem.do?d-16544-p=1"><spring:message
 								code="master.page.opinion.myListOpinionProduct" /></a></li>
 					<li><a href="opinion/actor/createOpinableItem.do"><spring:message
 								code="master.page.opinion.createOpinableProduct" /></a></li>
-				</ul>
-			</li>
+				</ul></li>
 
 			<li><a class="fNiv"><spring:message
 						code="master.page.aboutUs" /></a>
@@ -574,8 +569,8 @@
 					<li><a href="welcome/aboutUs.do"><spring:message
 								code="master.page.aboutUs" /></a></li>
 				</ul></li>
-				
-				<li><a class="fNiv"><spring:message
+
+			<li><a class="fNiv"><spring:message
 						code="master.page.administrator.legislation" /></a>
 				<ul>
 					<li class="arrow"></li>
@@ -585,6 +580,15 @@
 		</security:authorize>
 
 		<security:authorize access="isAnonymous()">
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.angular" /></a>
+				<ul>
+					<li class="arrow"></li>
+					<li><a href="angular/helloWorld.do?d-16544-p=1"><spring:message
+								code="master.page.angular.helloWorld" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv" href="security/login.do"><spring:message
 						code="master.page.login" /></a></li>
 			<!-- REGISTRO DE USUARIO -->
@@ -612,25 +616,25 @@
 					<li><a href="material/list.do?d-16544-p=1"><spring:message
 								code="master.page.admin.material.list" /></a></li>
 				</ul></li>
-				
-			<li><a class="fNiv"><spring:message	code="master.page.recycler" /></a>
+
+			<li><a class="fNiv"><spring:message
+						code="master.page.recycler" /></a>
 				<ul>
 					<li class="arrow"></li>
-					
-					<li><a href="recycler/list.do?d-16544-p=1"><spring:message code="master.page.recycler.list" /></a></li>
-				</ul>
-			</li>
-			
+
+					<li><a href="recycler/list.do?d-16544-p=1"><spring:message
+								code="master.page.recycler.list" /></a></li>
+				</ul></li>
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.course" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a
-						href="course/list.do?d-16544-p=1"><spring:message
+					<li><a href="course/list.do?d-16544-p=1"><spring:message
 								code="master.page.course.listAll" /></a></li>
 				</ul></li>
-				
-			
+
+
 			<li><a class="fNiv"><spring:message
 						code="master.page.aboutUs" /></a>
 				<ul>
@@ -660,6 +664,7 @@
 				</ul></li>
 		</security:authorize>
 	</ul>
+
 </div>
 
 <div>

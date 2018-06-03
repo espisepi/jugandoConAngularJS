@@ -55,6 +55,7 @@
 		<security:intercept-url pattern="/course/display.do**" access="permitAll"/>
 		<security:intercept-url pattern="/course/list.do**" access="permitAll"/>
 		<security:intercept-url pattern="/legislation/list.do" access="permitAll"/>
+		<security:intercept-url pattern="/angular/**" access="permitAll"/>
 		
 	
 	<!-- 	MANAGER-->
