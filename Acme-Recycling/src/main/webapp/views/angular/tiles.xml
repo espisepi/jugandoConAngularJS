@@ -16,9 +16,10 @@
        
 <tiles-definitions>
 
-	<definition name="angular/helloWorld" extends="master.page">	
-		<put-attribute name="title" value="Hello world" />
-		<put-attribute name="body" value="/views/angular/helloWorld.html" />
+	<definition name="angular/helloWorld" template="/views/angular/helloWorld.html">
+	<!-- Ya no hace falta poner atributos a las vistas porque no llamamos al template layout.jsp -->	
+		<!-- <put-attribute name="title" value="Hello world" />
+		<put-attribute name="body" value="/views/angular/helloWorld.html" /> -->
 	</definition>
 	
 </tiles-definitions>
