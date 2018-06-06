@@ -11,6 +11,9 @@
 
 	function PruebaController($scope) {
 		$scope.mensaje = "Hola Mundo";
+		$scope.cambiarMensaje=function(){
+			$scope.mensaje = "Adios";
+		}
 	}
 </script>
 
@@ -23,7 +26,7 @@
 
 <body ng-controller="PruebaController">
 	<h1>{{mensaje}}</h1>
-
-	sggggggggg
+	
+	<button ng-click="cambiarMensaje()">Cambio</button>
 
 </body>
