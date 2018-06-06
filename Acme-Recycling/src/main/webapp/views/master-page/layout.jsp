@@ -17,7 +17,7 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html ng-app="app">
 <head>
 
 <base
@@ -30,6 +30,7 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jmenu.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 
 <link rel="stylesheet" href="styles/common.css" type="text/css">
 <link rel="stylesheet" href="styles/jmenu.css" media="screen"
@@ -37,6 +38,14 @@
 <link rel="stylesheet" href="styles/displaytag.css" type="text/css">
 
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
+
+<script>
+var app=angular.module("app",[]);
+  
+function PruebaController($scope) {
+  $scope.mensaje="Hola Mundo";
+}
+</script>
 
 <script type="text/javascript">
 	$(document).ready(function() {
@@ -61,7 +70,8 @@
 
 </head>
 
-<body>
+<body ng-controller="PruebaController">
+
 	<div>
 		<tiles:insertAttribute name="header" />
 	</div>
