@@ -38,6 +38,7 @@
 <link rel="stylesheet" href="styles/jmenu.css" media="screen"
 	type="text/css" />
 <link rel="stylesheet" href="styles/displaytag.css" type="text/css">
+<link rel="stylesheet" href="styles/clock.css" type="text/css">
 
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 
