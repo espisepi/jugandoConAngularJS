@@ -17,6 +17,7 @@
 <tiles-definitions>
 
 	<definition name="master.page" template="/views/master-page/layout.jsp">
+		<put-attribute name="clock" value="/views/master-page/clock.jsp" />
 		<put-attribute name="title" value="" />
 		<put-attribute name="header" value="/views/master-page/header.jsp" />
 		<put-attribute name="body" value="" />
