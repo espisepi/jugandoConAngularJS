@@ -30,7 +30,9 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jmenu.js"></script>
- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script type="text/javascript" src="scripts/scriptAngular.js"></script>
 
 <link rel="stylesheet" href="styles/common.css" type="text/css">
 <link rel="stylesheet" href="styles/jmenu.css" media="screen"
@@ -38,14 +40,6 @@
 <link rel="stylesheet" href="styles/displaytag.css" type="text/css">
 
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
-
-<script>
-var app=angular.module("app",[]);
-  
-function PruebaController($scope) {
-  $scope.mensaje="Hola Mundo";
-}
-</script>
 
 <script type="text/javascript">
 	$(document).ready(function() {

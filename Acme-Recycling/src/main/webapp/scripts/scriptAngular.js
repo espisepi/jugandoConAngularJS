@@ -1,5 +1,10 @@
 var app = angular.module("app", []);
 
-function PruebaController($scope) {
-	$scope.mensaje = "Hola Mundo";
-}
+app.controller("PruebaController", function($scope) {
+	$scope.opinion = {
+		title : "hola",
+		comment : "",
+		photo : "",
+		caption : ""
+	}
+});
