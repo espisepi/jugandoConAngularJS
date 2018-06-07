@@ -9,7 +9,7 @@
  */
 
 .widget {
-	width: 40%;
+	width: 20%;
 	margin: 2em;
 	/*margin:32px; */
 }
@@ -17,4 +17,22 @@
 .widget p {
 	display: inline-block;
 	line-height: 1em;
+}
+
+.reloj {
+	font-family: Oswald, Arial;
+	width: 100%;
+	padding: 20px;
+	font-size: 2em;
+	text-align: center;
+	background: rgba(0,0,0,.5);
+}
+
+.reloj .caja-segundos {
+	display: inline-block;
+}
+
+.reloj .segundos{
+	font-size: 2rem;
+	display: block;
 }
