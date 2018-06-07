@@ -28,11 +28,26 @@
 
 	<B><acme:textbox code="opinion.title" path="opinion.title" /></B>
 	<br />
-	<B><acme:textbox code="opinion.comment" path="opinion.comment" /></B>
+	
+	<form:label path="opinion.comment">
+		<spring:message code="opinion.comment" />
+	</form:label>
+	<form:input path="opinion.comment" ng-model="opinion.comment"/>
+	<form:errors path="opinion.comment" cssClass="error" />
 	<br />
-	<B><acme:textbox code="opinion.photo" path="opinion.photo" placeHolder="http://"/></B>
+	
+	<form:label path="opinion.photo">
+		<spring:message code="opinion.photo" />
+	</form:label>
+	<form:input path="opinion.photo" ng-model="opinion.photo"/>
+	<form:errors path="opinion.photo" cssClass="error" />
 	<br />
-	<B><acme:textbox code="opinion.caption" path="opinion.caption" /></B>
+	
+	<form:label path="opinion.caption">
+		<spring:message code="opinion.caption" />
+	</form:label>
+	<form:input path="opinion.caption" ng-model="opinion.caption"/>
+	<form:errors path="opinion.caption" cssClass="error" />
 	<br />
 
 	<jstl:if test="${!hiddenSelects}">
