@@ -29,3 +29,7 @@
 			<p id="segundos" class="segundos">12</p>
 		</div>
 	</div>
+	
+</div>
+
+<script type="text/javascript" src="scripts/clock.js"></script>
