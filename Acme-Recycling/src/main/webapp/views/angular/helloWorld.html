@@ -6,17 +6,7 @@
 <script
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 
-<script>
-	var app = angular.module("app", []);
-
-	function PruebaController($scope) {
-		$scope.mensaje = "Hola Mundo";
-		$scope.cambiarMensaje=function(){
-			$scope.mensaje = "Adios";
-		}
-	}
-</script>
-
+<script type="text/javascript" src="http://localhost:8080/Acme-Recycling/scripts/scriptAngular.js"></script>
 
 
 <!-- FIN CODIGO COPIADO Y PEGADO DE LAYOUT.JSP-->
@@ -27,10 +17,5 @@
 <body ng-controller="PruebaController">
 	<h1>{{mensaje}}</h1>
 	
-	<button ng-click="cambiarMensaje()">Cambio</button>
-	<br>
-	
-	<!-- ng-model: Esta directiva indica qué variable del $scope está asociado a este <input>. -->
-	Mensaje: <input ng-model="mensaje">
 
 </body>
