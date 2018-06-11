@@ -15,7 +15,12 @@
 
 
 <body ng-controller="PruebaController">
-	<h1>{{mensaje}}</h1>
+
+	<ul>
+	<li ng-repeat="material in materiales">
+	<h2>{{material.title}}</h2>
+	</li>
+	</ul>
 	
 
 </body>
