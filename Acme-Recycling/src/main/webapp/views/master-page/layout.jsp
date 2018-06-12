@@ -65,14 +65,14 @@
 
 </head>
 
-<body ng-controller="PruebaController">
+<body>
 
 	<div>
 		<tiles:insertAttribute name="header" />
 	</div>
-	<div>
+<%-- 	<div>
 		<tiles:insertAttribute name="clock" />
-	</div>
+	</div> --%>
 	<h1>
 		<tiles:insertAttribute name="title" />
 	</h1>

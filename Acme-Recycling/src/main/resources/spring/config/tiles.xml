@@ -44,7 +44,7 @@
 		<value>/views/actor/tiles.xml</value>
 		<value>/views/buy/tiles.xml</value>
 		<value>/views/legislation/tiles.xml</value>
-		<value>/views/angular/tiles.xml</value>
+		<value>/views/commentAngular/tiles.xml</value>
 
 
 	</util:list>

@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import services.CommentAngularService;
 
@@ -33,10 +34,10 @@ public class CommentAngularController extends AbstractController {
 	//Methods---------------------------------------------------------
 
 	//List------------------------------------------------
-	@RequestMapping(value = "/list", produces = {
+	@RequestMapping(value = "/listJSON", produces = {
 		MediaType.APPLICATION_JSON_VALUE
 	}, method = RequestMethod.GET)
-	public String list() {
+	public String listJSON() {
 		final String result;
 		Collection<CommentAngular> commentsAngular;
 
@@ -46,23 +47,13 @@ public class CommentAngularController extends AbstractController {
 		return result;
 	}
 
-	//save-----------------------------------------------
-	@RequestMapping(value = "/list", produces = {
-		MediaType.APPLICATION_JSON_VALUE
-	}, method = RequestMethod.POST)
-	public String save(final String commentJson) {
-		CommentAngular result;
-		String view;
+	//List------------------------------------------------
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public ModelAndView list() {
+		final ModelAndView result;
 
-		result = new Gson().fromJson(commentJson, CommentAngular.class);
-		try {
-			result = this.commentAngularService.save(result);
-			view = this.list();
-		} catch (final Throwable oops) {
-			view = this.list();
-		}
+		result = new ModelAndView("commentAngular/list");
 
-		return view;
+		return result;
 	}
-
 }

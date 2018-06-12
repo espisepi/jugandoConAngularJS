@@ -585,7 +585,7 @@
 						code="master.page.angular" /></a>
 				<ul>
 					<li class="arrow"></li>
-					<li><a href="angular/helloWorld.do?d-16544-p=1"><spring:message
+					<li><a href="commentAngular/list.do?d-16544-p=1"><spring:message
 								code="master.page.angular.helloWorld" /></a></li>
 				</ul></li>
 
