@@ -3541,4 +3541,13 @@
 
 
 	<!-- Other domain beans come here -->
+	
+	<bean id="commentAngular1" class="domain.CommentAngular">
+		<property name="comment" value="comment1" />
+	</bean>
+	
+	<bean id="commentAngular2" class="domain.CommentAngular">
+		<property name="comment" value="comment2" />
+	</bean>
+	
 </beans>

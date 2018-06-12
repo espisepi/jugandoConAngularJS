@@ -6,7 +6,8 @@
 <script
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
 
-<script type="text/javascript" src="http://localhost:8080/Acme-Recycling/scripts/scriptAngular.js"></script>
+<script type="text/javascript"
+	src="http://localhost:8080/Acme-Recycling/scripts/scriptAngular.js"></script>
 
 
 <!-- FIN CODIGO COPIADO Y PEGADO DE LAYOUT.JSP-->
@@ -17,10 +18,10 @@
 <body ng-controller="PruebaController">
 
 	<ul>
-	<li ng-repeat="material in materiales">
-	<h2>{{material.title}}</h2>
-	</li>
+		<li ng-repeat="commentAngular in comments">
+			<h2>{{commentAngular.comment}}</h2>
+		</li>
 	</ul>
-	
+
 
 </body>

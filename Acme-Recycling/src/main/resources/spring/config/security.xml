@@ -57,6 +57,7 @@
 		<security:intercept-url pattern="/legislation/list.do" access="permitAll"/>
 		<security:intercept-url pattern="/angular/**" access="permitAll"/>
 		<security:intercept-url pattern="/materialJSON/**" access="permitAll"/>
+		<security:intercept-url pattern="/commentAngular/**" access="permitAll"/>
 		
 	
 	<!-- 	MANAGER-->
