@@ -11,11 +11,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.ArticleService;
 import services.ChirpService;
 import services.UserService;
+
+import com.google.gson.Gson;
+
 import domain.Article;
 import domain.Chirp;
 import domain.User;
@@ -44,17 +48,29 @@ public class UserController extends AbstractController {
 	//Listing-----------------------------------------------------------
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public ModelAndView list() {
+	public @ResponseBody
+	String list() {
 
-		ModelAndView result;
+		//final ModelAndView result;
 		Collection<User> users;
+		String result;
 
 		users = this.userService.findAll();
+		for (final User u : users) {
+			//Quitamos la bidireccionalidad para que no ocurra un stack overflow error
+			u.setChirps(null);
+			u.setNewspapers(null);
+			u.setArticles(null);
+			u.setFollowers(null);
+			u.setFollowed(null);
+			u.setVolumes(null);
+		}
+		result = new Gson().toJson(users);
 
-		result = new ModelAndView("user/list");
-		result.addObject("users", users);
-		result.addObject("requestURI", "user/list.do");
-		result.addObject("requestProfileURL", "user/display.do");
+		//		result = new ModelAndView("user/list");
+		//		result.addObject("users", users);
+		//		result.addObject("requestURI", "user/list.do");
+		//		result.addObject("requestProfileURL", "user/display.do");
 
 		return result;
 
