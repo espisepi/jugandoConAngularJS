@@ -31,6 +31,13 @@
 
 	<mvc:annotation-driven validator="validator"
 		conversion-service="conversionService" />
+		
+	<mvc:annotation-driven conversion-service="conversionService" >
+    	<mvc:message-converters>
+    		<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" >
+    		</bean>
+    	</mvc:message-converters>
+    </mvc:annotation-driven>
 
 	<!-- Converters -->
 

@@ -17,9 +17,6 @@ import org.springframework.web.servlet.ModelAndView;
 import services.ArticleService;
 import services.ChirpService;
 import services.UserService;
-
-import com.google.gson.Gson;
-
 import domain.Article;
 import domain.Chirp;
 import domain.User;
@@ -49,11 +46,10 @@ public class UserController extends AbstractController {
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public @ResponseBody
-	String list() {
+	Collection<User> list() {
 
 		//final ModelAndView result;
 		Collection<User> users;
-		String result;
 
 		users = this.userService.findAll();
 		for (final User u : users) {
@@ -65,14 +61,13 @@ public class UserController extends AbstractController {
 			u.setFollowed(null);
 			u.setVolumes(null);
 		}
-		result = new Gson().toJson(users);
 
 		//		result = new ModelAndView("user/list");
 		//		result.addObject("users", users);
 		//		result.addObject("requestURI", "user/list.do");
 		//		result.addObject("requestProfileURL", "user/display.do");
 
-		return result;
+		return users;
 
 	}
 
