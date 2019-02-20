@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,6 +41,15 @@ public class UserController extends AbstractController {
 
 	public UserController() {
 		super();
+	}
+
+	@RequestMapping(value = "/post", method = RequestMethod.POST)
+	public User list(@RequestBody final User user) {
+		User result;
+		result = user;
+		System.out.println("-----------------------------");
+		System.out.println(user);
+		return result;
 	}
 
 	//Listing-----------------------------------------------------------
