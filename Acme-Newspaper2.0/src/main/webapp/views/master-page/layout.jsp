@@ -16,7 +16,7 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html ng-app="app">
 <head>
 
 <base
@@ -29,6 +29,9 @@
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jmenu.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+<script type="text/javascript" src="scripts/scriptAngular.js"></script>
 
 <link rel="stylesheet" href="styles/common.css" type="text/css">
 <link rel="stylesheet" href="styles/jmenu.css" media="screen" type="text/css" />
@@ -61,6 +64,10 @@
 
 <body>
 
+	<div ng-controller="PruebaController">
+		<h2>{{mensaje}}</h2>
+	</div>
+
 	<div>
 		<tiles:insertAttribute name="header" />
 	</div>
@@ -74,6 +81,8 @@
 			<span class="message"><spring:message code="${message}" /></span>
 		</jstl:if>	
 	</div>
+	
+	
 	<div>
 		<tiles:insertAttribute name="footer" />
 	</div>
