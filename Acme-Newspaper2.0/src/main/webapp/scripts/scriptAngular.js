@@ -1,5 +1,5 @@
 var app = angular.module("app", [
-	'ngMessages'
+		'ngMessages', 'ngRoute'
 ]);
 
 // Todo lo que añadamos como parametro en nuestra function del controlador se instancian ya que son singleton

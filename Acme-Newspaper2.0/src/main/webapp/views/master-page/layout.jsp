@@ -33,6 +33,7 @@
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js">
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-route.js"></script>
 <script type="text/javascript" src="scripts/scriptAngular.js"></script>
 
 <link rel="stylesheet" href="styles/common.css" type="text/css">
