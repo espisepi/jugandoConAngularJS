@@ -20,6 +20,14 @@
 
 <div>
 	<ul id="jMenu">
+	
+	<li><a class="fNiv"><spring:message	code="master.page.validacion" /></a>
+				<ul>
+					<li class="arrow"></li>			
+					<li><a href="validacion/list.do"><spring:message code="master.page.validacion" /></a></li>
+				</ul>
+	</li>
+	
 		<!-- Do not forget the "fNiv" class for the first level links !! -->
 		<security:authorize access="hasRole('ADMIN')">
 			<li><a class="fNiv"><spring:message	code="master.page.administrator" /></a>

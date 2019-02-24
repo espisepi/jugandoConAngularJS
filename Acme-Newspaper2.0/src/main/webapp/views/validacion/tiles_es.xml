@@ -21,4 +21,9 @@
 		<put-attribute name="body" value="/views/validacion/edit.jsp" />
 	</definition>
 	
+	<definition name="validacion/list" extends="master.page">	
+		<put-attribute name="title" value="List validacion" />
+		<put-attribute name="body" value="/views/validacion/list.jsp" />
+	</definition>
+	
 </tiles-definitions>

@@ -20,7 +20,7 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<%-- <form:form action="validacion/edit.do" modelAttribute="validacion">
+<form:form action="validacion/edit.do" modelAttribute="validacion">
 
 	<form:hidden path="id" />
 	<form:hidden path="version" />
@@ -28,8 +28,19 @@
 <!-- ATRIBUTOS -->
 
 	<fieldset>
-	<B><acme:textbox code="validacion.textMaxLength" path="validacion.textMaxLength"/></B>
+	<B><acme:textbox code="validacion.textMaxLength" path="textMaxLength"/></B>
 	<br>
+	<B><acme:textbox code="validacion.email" path="email"/></B>
+	<br>
+	<B><acme:textbox code="validacion.numberMax" path="numberMax"/></B>
+	<br>
+	<B><acme:textbox code="validacion.numberMin" path="numberMin"/></B>
+	<br>
+	<B><acme:textbox code="validacion.textPattern" path="textPattern"/></B>
+	<br>
+	<B><acme:textbox code="validacion.url" path="url"/></B>
+	<br>
+	
 	</fieldset>
 	
 <!-- BOTONES -->
@@ -37,7 +48,6 @@
 	<input type="submit" name="save" value="<spring:message code="validacion.save" />" />&nbsp; 
 
 	<acme:cancel
-		url="volume/customer/list.do?d-16544-p=1"
+		url="validacion/list.do?d-16544-p=1"
 		code="validacion.cancel" />
 </form:form>
- --%>

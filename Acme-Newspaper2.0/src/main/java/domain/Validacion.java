@@ -6,18 +6,28 @@ import javax.persistence.AccessType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Access(AccessType.PROPERTY)
 public class Validacion extends DomainEntity {
 
+	private String	textMaxLength;
 	private String	email;
 	private Integer	numberMax;
 	private Integer	numberMin;
-	private String	textMaxLength;
 	private String	textPattern;
 	private String	url;
 
+
+	@NotNull
+	public String getTextMaxLength() {
+		return this.textMaxLength;
+	}
+
+	public void setTextMaxLength(final String textMaxLength) {
+		this.textMaxLength = textMaxLength;
+	}
 
 	public String getEmail() {
 		return this.email;
@@ -27,6 +37,7 @@ public class Validacion extends DomainEntity {
 		this.email = email;
 	}
 
+	@NotNull
 	public Integer getNumberMax() {
 		return this.numberMax;
 	}
@@ -35,20 +46,13 @@ public class Validacion extends DomainEntity {
 		this.numberMax = numberMax;
 	}
 
+	@NotNull
 	public Integer getNumberMin() {
 		return this.numberMin;
 	}
 
 	public void setNumberMin(final Integer numberMin) {
 		this.numberMin = numberMin;
-	}
-
-	public String getTextMaxLength() {
-		return this.textMaxLength;
-	}
-
-	public void setTextMaxLength(final String textMaxLength) {
-		this.textMaxLength = textMaxLength;
 	}
 
 	public String getTextPattern() {
