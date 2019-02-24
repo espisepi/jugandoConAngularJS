@@ -30,7 +30,10 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jmenu.js"></script>
 <script
-	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular-route.min.js"></script>
+	
 <script type="text/javascript" src="scripts/scriptAngular.js"></script>
 
 <link rel="stylesheet" href="styles/common.css" type="text/css">
@@ -59,7 +62,7 @@
 		window.location.replace(loc);
 	}
 </script>
-
+<script src="scriptAngular.js"></script>
 </head>
 
 <body>
@@ -71,6 +74,15 @@
 	<div>
 		<tiles:insertAttribute name="header" />
 	</div>
+	
+<div ng-controller="ControllerList">
+<table>
+<tr ng-repeat="contact in contacts">
+<td>{{contact.name}}</td>
+</tr>
+</table>
+
+</div> 
 	<div>
 		<h1>
 			<tiles:insertAttribute name="title" />
