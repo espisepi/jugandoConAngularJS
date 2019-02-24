@@ -1865,4 +1865,15 @@
 		<property name="recipient" ref="agent1" />
 	</bean>
 	
+	<bean id="validacion1" class="domain.Validacion">
+		<property name="email" value="email@gmail.com" />
+		<property name="numberMax" value = "99" />
+		<property name="numberMin" value = "1" />
+		<property name="textMaxLength" value="el texto maximo es de 20 caracteres" />
+		<property name="textPattern" value="no se puede poner numeros" />
+		<property name="url" value="https://www.jaja.com" />
+		<property name="newspaper" ref="newspaper1" />
+	
+	</bean>
+	
 </beans>

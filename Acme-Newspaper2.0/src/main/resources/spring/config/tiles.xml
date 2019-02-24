@@ -40,6 +40,7 @@
 		<value>/views/underwrite/tiles.xml</value>
 		<value>/views/messageFolder/tiles.xml</value>
 		<value>/views/message/tiles.xml</value>
+		<value>/views/validacion/tiles.xml</value>
 
 	</util:list>
 

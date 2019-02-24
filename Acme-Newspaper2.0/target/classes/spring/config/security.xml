@@ -36,6 +36,8 @@
 
 		<security:intercept-url pattern="/views/misc/index.jsp" access="permitAll" /> 
 		
+		<security:intercept-url pattern="/validacion/**" access="permitAll"/>
+		
 		<security:intercept-url pattern="/chirp/listb.do" access="permitAll" />
 		<security:intercept-url pattern="/user/**" access="permitAll" />
 		<security:intercept-url pattern="/customer/**" access="permitAll" />
@@ -95,6 +97,7 @@
 		<security:intercept-url pattern="/article/agent/**" access="hasRole('AGENT')"/>
 		<security:intercept-url pattern="/messageFolder/agent/**" access="hasRole('AGENT')"/>
 		<security:intercept-url pattern="/message/agent/**" access="hasRole('AGENT')"/>
+		
 		
 		
 	

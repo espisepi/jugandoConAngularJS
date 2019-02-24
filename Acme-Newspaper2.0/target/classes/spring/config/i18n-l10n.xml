@@ -43,6 +43,8 @@
 
 		<value>/views/messageFolder/messages</value>
 		<value>/views/message/messages</value>
+		
+		<value>/views/validacion/messages</value>
 
 		
 	</util:list>

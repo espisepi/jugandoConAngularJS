@@ -43,7 +43,7 @@ public class UserController extends AbstractController {
 		super();
 	}
 
-	@RequestMapping(value = "/post", method = RequestMethod.POST)
+	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public User list(@RequestBody final User user) {
 		User result;
 		result = user;
