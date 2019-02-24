@@ -16,10 +16,35 @@
 <%@taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@taglib prefix="security"	uri="http://www.springframework.org/security/tags"%>
+<%@taglib prefix="security"
+	uri="http://www.springframework.org/security/tags"%>
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+<script type="text/javascript" src="scripts/validacionAngular.js"></script>
+<div ng-controller="ValidacionController">
+
+<form name="validacionForm" method="POST" novalidate
+		ng-class="{'form-error':submitted}" ng-submit="saveValidacion()">
+
+		<label class="form-label">textMaxLength:</label> <input type="text"
+			name="textMaxLength" required ng-model="validacion.textMaxLength"
+			ng-maxlength="10" class="form-input" />
+			
+		<label class="form-label">numberMax:</label> <input type="number"
+			name="numberMax" ng-model="validacion.numberMax"
+			max="99" class="form-input" />
+			
+		<label class="form-label">numberMin:</label> <input type="number"
+			name="numberMin" ng-model="validacion.numberMin"
+			min="1" class="form-input" />
+
+
+		<input type="submit" name="save"
+			value="<spring:message code="validacion.save" />" />&nbsp;
+</form>
+
+	<%-- 
 <form:form action="validacion/edit.do" modelAttribute="validacion">
 
 	<form:hidden path="id" />
@@ -28,8 +53,16 @@
 <!-- ATRIBUTOS -->
 
 	<fieldset>
-	<B><acme:textbox code="validacion.textMaxLength" path="textMaxLength"/></B>
+
+	<div>
+	<form:label path="textMaxLength">
+		<spring:message code="validacion.textMaxLength" />
+	</form:label>
+	<form:input path="textMaxLength" type="text" ng-model="validacion.textMaxLength" name="textMaxLength" ng-maxlength="5"/>
+	<form:errors path="textMaxLength" cssClass="error" />
+	</div>
 	<br>
+	
 	<B><acme:textbox code="validacion.email" path="email"/></B>
 	<br>
 	<B><acme:textbox code="validacion.numberMax" path="numberMax"/></B>
@@ -50,4 +83,7 @@
 	<acme:cancel
 		url="validacion/list.do?d-16544-p=1"
 		code="validacion.cancel" />
-</form:form>
+</form:form> --%>
+
+
+</div>

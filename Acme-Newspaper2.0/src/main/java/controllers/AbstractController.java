@@ -10,9 +10,14 @@
 
 package controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.commons.lang.exception.ExceptionUtils;
+import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.ClassUtils;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.servlet.ModelAndView;
@@ -43,4 +48,12 @@ public class AbstractController {
 		return result;
 	}
 
+	public List<String> bindingErrorsToList(final BindingResult bindingResult) {
+		final List<String> result = new ArrayList<String>();
+
+		for (final DefaultMessageSourceResolvable error : bindingResult.getAllErrors())
+			result.add(error.getDefaultMessage());
+
+		return result;
+	}
 }

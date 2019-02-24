@@ -2,8 +2,14 @@
 package controllers;
 
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.validation.BindingResult;
@@ -74,18 +80,20 @@ public class ValidacionController extends AbstractController {
 
 	// Save -----------------------------------------------------------------
 	@RequestMapping(value = "/edit", method = RequestMethod.POST, params = "save")
-	public ModelAndView save(final Validacion validacion, final BindingResult bindingResult) {
-		ModelAndView result;
+	public ResponseEntity<Object> save(@Valid final Validacion validacion, final BindingResult bindingResult) {
+		ResponseEntity<Object> result;
 
-		if (bindingResult.hasErrors())
-			result = this.createEditModelAndView(validacion);
-		else
+		if (bindingResult.hasErrors()) {
+			final List<String> errors = this.bindingErrorsToList(bindingResult);
+			result = new ResponseEntity<Object>(errors, HttpStatus.OK);
+		} else
 			try {
 				this.validacionService.save(validacion);
-				result = new ModelAndView("redirect:list.do");
+				result = new ResponseEntity<Object>(HttpStatus.CREATED);
 			} catch (final Throwable oops) {
-				result = this.createEditModelAndView(validacion, "validacion.commit.error");
+				result = new ResponseEntity<Object>(Collections.singletonList("cannot commit this operation"), HttpStatus.CONFLICT);
 			}
+
 		return result;
 	}
 
