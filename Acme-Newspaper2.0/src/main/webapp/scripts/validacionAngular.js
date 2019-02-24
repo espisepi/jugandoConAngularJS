@@ -52,7 +52,7 @@ app.controller("ValidacionController", [
 						$scope.getValidacions();
 						$scope.validacion = null;
 						$scope.submitted = false;
-						ValidacionService.getValidacions();
+
 					}, function error(response) {
 						if (response.status == 409) {
 							$scope.errorMessage = response.data.message;

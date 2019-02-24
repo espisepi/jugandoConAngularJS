@@ -30,7 +30,7 @@
 <script type="text/javascript" src="scripts/jquery-ui.js"></script>
 <script type="text/javascript" src="scripts/jmenu.js"></script>
 <script
-	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js">
 </script>
 <script type="text/javascript" src="scripts/scriptAngular.js"></script>

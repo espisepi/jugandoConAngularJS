@@ -24,25 +24,27 @@
 <script type="text/javascript" src="scripts/validacionAngular.js"></script>
 <div ng-controller="ValidacionController">
 
-<form name="validacionForm" method="POST" novalidate
+	<form name="validacionForm" method="POST" novalidate
 		ng-class="{'form-error':submitted}" ng-submit="saveValidacion()">
 
 		<label class="form-label">textMaxLength:</label> <input type="text"
 			name="textMaxLength" required ng-model="validacion.textMaxLength"
-			ng-maxlength="10" class="form-input" />
+			ng-maxlength="10" class="form-input" /> 
 			
-		<label class="form-label">numberMax:</label> <input type="number"
-			name="numberMax" ng-model="validacion.numberMax"
+		<label class="form-label">numberMax:</label>
+		<input type="number" name="numberMax" ng-model="validacion.numberMax"
 			max="99" class="form-input" />
-			
+
+		<div ng-messages="validacionForm.numberMax.$error"
+			ng-show="submitted && validacionForm.numberMax.$invalid" class="error-messages">
+			<p ng-message="max">Invalid number!</p>
+		</div>
+
 		<label class="form-label">numberMin:</label> <input type="number"
-			name="numberMin" ng-model="validacion.numberMin"
-			min="1" class="form-input" />
-
-
-		<input type="submit" name="save"
+			name="numberMin" ng-model="validacion.numberMin" min="1"
+			class="form-input" /> <input type="submit" name="save"
 			value="<spring:message code="validacion.save" />" />&nbsp;
-</form>
+	</form>
 
 	<%-- 
 <form:form action="validacion/edit.do" modelAttribute="validacion">

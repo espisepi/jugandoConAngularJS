@@ -16,6 +16,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import services.ValidacionService;
@@ -50,6 +51,17 @@ public class ValidacionController extends AbstractController {
 
 		return result;
 
+	}
+
+	//List REST --------------------------------------------------------------
+	@RequestMapping(value = "/rest/list", method = RequestMethod.GET)
+	public @ResponseBody
+	Collection<Validacion> listRest() {
+		Collection<Validacion> validacions;
+
+		validacions = this.validacionService.findAll();
+
+		return validacions;
 	}
 
 	// Create -----------------------------------------------------------------
