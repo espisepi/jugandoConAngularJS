@@ -1,20 +1,20 @@
-app.config([
-		'$routeProvider', function($routeProvider) {
-			$routeProvider.when('/validacion/list', {
-				templateUrl : 'views/validacion/list.jsp',
-				controller : "ValidacionListController as ValidacionListCtrl",
-				resolve : {
-					async : [
-							'ValidacionService', function(ItemService) {
-								return ValidacionService.getValidacions();
-							}
-					]
-				}
-			}).otherwise({
-				redirectTo : '/validacion/list'
-			});
-		}
-]);
+// app.config([
+// '$routeProvider', function($routeProvider) {
+// $routeProvider.when('/validacion/list', {
+// templateUrl : 'views/validacion/list.jsp',
+// controller : "ValidacionListController as ValidacionListCtrl",
+// resolve : {
+// async : [
+// 'ValidacionService', function(ItemService) {
+// return ValidacionService.getValidacions();
+// }
+// ]
+// }
+// }).otherwise({
+// redirectTo : '/validacion/list'
+// });
+// }
+// ]);
 
 app.service('ValidacionService', [
 		'$http', function($http) {

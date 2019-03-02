@@ -21,13 +21,14 @@
 <%@taglib prefix="display" uri="http://displaytag.sf.net"%>
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<script type="text/javascript" src="scripts/validacionAngular.js"></script>
+<script type="text/javascript" src="scripts/validacion/validacionAngular.js"></script>
 <div ng-controller="ValidacionController">
 
-	<form name="validacionForm" method="POST" novalidate
-		ng-class="{'form-error':submitted}" ng-submit="saveValidacion()">
+<form name="validacionForm" method="POST" novalidate
+	ng-class="{'form-error':submitted}" ng-submit="saveValidacion()">
 
-		<label class="form-label">textMaxLength:</label> <input type="text"
+		<label class="form-label"><spring:message code="validacion.numberMax" /></label> 
+		<input type="text"
 			name="textMaxLength" required ng-model="validacion.textMaxLength"
 			ng-maxlength="10" class="form-input" /> 
 			
@@ -42,9 +43,11 @@
 
 		<label class="form-label">numberMin:</label> <input type="number"
 			name="numberMin" ng-model="validacion.numberMin" min="1"
-			class="form-input" /> <input type="submit" name="save"
+			class="form-input" /> 
+			
+		<input type="submit" name="save"
 			value="<spring:message code="validacion.save" />" />&nbsp;
-	</form>
+</form>
 
 	<%-- 
 <form:form action="validacion/edit.do" modelAttribute="validacion">
