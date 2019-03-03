@@ -22,9 +22,19 @@
 
 <%@ taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
+<script type="text/javascript" src="scripts/validacion/validacionAngular.js"></script>
+<script type="text/javascript" src="scripts/validacion/list.js"></script>
+<div ng-controller="ListController">
 
+<table ng-table ="tableParams" >
+<tr ng-repeat="validacion in validacions">
+<td data-title="'textMaxLength'" filter="{ textMaxLength: 'text'}">{{validacion.textMaxLength}}</td>
+</tr>
+</table>
 
-<display:table pagesize="5" class="displaytag" keepStatus="true"
+</div>
+
+<%-- <display:table pagesize="5" class="displaytag" keepStatus="true"
 	name="validacions" requestURI="${requestURI}" id="row">
 	
 	<!-- Attributes -->
@@ -48,7 +58,7 @@
 	<display:column property="url" title="${titleHeader}" sortable="true" />
 	
 </display:table>
-
+ --%>
 <spring:url value="validacion/create.do" var="displayURL" />
 			<a href="${displayURL}"><spring:message
 					code="validacion.create" /></a>

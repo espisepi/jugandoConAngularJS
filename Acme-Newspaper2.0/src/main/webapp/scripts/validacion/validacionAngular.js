@@ -34,31 +34,35 @@ app.service('ValidacionService', [
 					},
 					headers : 'Accept:application/json'
 				});
-			}
+			};
 
 			this.getValidacions = function getValidacions() {
 				return $http({
 					method : 'GET',
-					url : 'validacion/list.do',
+					url : 'validacion/rest/list.do',
 					headers : 'Accept:application/json'
 				}).then(function(response) {
 					return response.data;
 				});
-			}
+			};
 
 		}
 ]);
 
 app.controller("ValidacionController", [
-		'$scope', 'ValidacionService', function($scope, ValidacionService) {
+		'$scope', 'ValidacionService', function($scope, ValidacionService, ngTableParams) {
 
 			$scope.submitted = false;
 
 			$scope.getValidacions = function() {
 				ValidacionService.getValidacions().then(function(data) {
 					$scope.validacions = data;
+
+					$scope.tableParams = new NgTableParams({}, {
+						dataset : $scope.validacions
+					});
 				});
-			}
+			};
 
 			$scope.saveValidacion = function() {
 
@@ -80,9 +84,7 @@ app.controller("ValidacionController", [
 						$scope.message = '';
 					});
 				}
-			}
-
-			$scope.getValidacions();
+			};
 
 		}
 ]);

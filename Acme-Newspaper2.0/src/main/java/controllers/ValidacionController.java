@@ -61,6 +61,9 @@ public class ValidacionController extends AbstractController {
 
 		validacions = this.validacionService.findAll();
 
+		for (final Validacion v : validacions)
+			v.setNewspaper(null);
+
 		return validacions;
 	}
 
