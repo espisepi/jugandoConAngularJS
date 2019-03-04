@@ -41,13 +41,15 @@ public class ValidacionController extends AbstractController {
 	public ModelAndView list() {
 
 		ModelAndView result;
-		Collection<Validacion> validacions;
+		//ya no necesitamos traernos los objetos porque Angular lo hara en la vista
 
-		validacions = this.validacionService.findAll();
+		//Collection<Validacion> validacions;
+
+		//validacions = this.validacionService.findAll();
 
 		result = new ModelAndView("validacion/list");
-		result.addObject("validacions", validacions);
-		result.addObject("requestURI", "validacion/list.do");
+		//result.addObject("validacions", validacions);
+		//result.addObject("requestURI", "validacion/list.do");
 
 		return result;
 
