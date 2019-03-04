@@ -33,6 +33,7 @@
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js">
 </script>
+<script src="scripts/dirPagination.js"></script>
 <script src="scripts/ng-table/ng-table.js"></script>
 <link rel="stylesheet" href="scripts/ng-table/ng-table.css">
 <script type="text/javascript" src="scripts/scriptAngular.js"></script>

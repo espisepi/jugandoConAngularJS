@@ -26,11 +26,16 @@
 <script type="text/javascript" src="scripts/validacion/list.js"></script>
 <div ng-controller="ListController">
 
-<table ng-table ="tableParams" >
-<tr ng-repeat="validacion in validacions">
-<td data-title="'textMaxLength'" filter="{ textMaxLength: 'text'}">{{validacion.textMaxLength}}</td>
+<table>
+ <tr dir-paginate="validacion in validacions|itemsPerPage:4">
+    <td>{{validacion.textMaxLength}}</td>
 </tr>
 </table>
+<dir-pagination-controls
+        max-size="5"
+        direction-links="true"
+        boundary-links="true" >
+</dir-pagination-controls>
 
 </div>
 
