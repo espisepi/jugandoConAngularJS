@@ -8,6 +8,8 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Access(AccessType.PROPERTY)
 public class Validacion extends DomainEntity {
@@ -78,6 +80,7 @@ public class Validacion extends DomainEntity {
 
 
 	@ManyToOne(optional = true)
+	@JsonIgnore
 	@Valid
 	public Newspaper getNewspaper() {
 		return this.newspaper;
